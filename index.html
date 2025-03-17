@@ -2,52 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
-  <!-- link your CSS -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- HEADER -->
-  <header>
-    <nav>
-      <h1>My Portfolio</h1>
-    </nav>
-  </header>
+
+  <!-- Tailwind CSS via CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css"
+  />
   
+  <!-- Favicon (optional) -->
+  <!-- <link rel="icon" href="favicon.ico" /> -->
+
+  <!-- Any additional meta tags -->
+  <meta name="description" content="A brief overview of my iOS development projects and skills." />
+</head>
+<body class="text-gray-800 bg-gray-100">
+
+  <!-- NAVBAR / HEADER -->
+  <header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-2xl font-bold text-blue-500">My Portfolio</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#about" class="hover:underline text-gray-700">About</a></li>
+          <li><a href="#projects" class="hover:underline text-gray-700">Projects</a></li>
+          <li><a href="#contact" class="hover:underline text-gray-700">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <!-- HERO SECTION -->
-  <section class="hero">
-    <h2>Hello, I'm [Your Name]</h2>
-    <p>iOS Developer & Swift Enthusiast</p>
-    <a href="#projects" class="btn">View My Projects</a>
+  <section
+    class="bg-gray-800 text-white flex flex-col items-center justify-center min-h-screen text-center px-4"
+  >
+    <h2 class="text-4xl font-bold mb-4">Hello, I'm <span class="text-blue-400">[Your Name]</span></h2>
+    <p class="text-xl mb-6">iOS Developer & Swift Enthusiast</p>
+    <a
+      href="#projects"
+      class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded text-lg transition"
+    >
+      View My Projects
+    </a>
   </section>
 
-  <!-- PROJECTS SECTION -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Coin Flip App</h3>
-      <p>
-        a swiftui-based coin flip app with sound effects, haptic feedback, 
-        and a flip counter. uses userdefaults for local data persistence.
-      </p>
-      <a href="https://github.com/yourname/coinflip" target="_blank">view on github</a>
-    </div>
-
-    <div class="project">
-      <h3>Awesome Project #2</h3>
-      <p>short description of your second project.</p>
-      <a href="https://github.com/yourname/project2" target="_blank">view on github</a>
-    </div>
-    <!-- add more projects similarly -->
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 [Your Name]. All rights reserved.</p>
-  </footer>
-
-  <!-- optional script -->
-  <script src="script.js"></script>
-</body>
-</html>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-16 px-4 bg-gray-100">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">About Me</h2>
+      <p class="text-gray-700 text-lg mb-6">
+        I'm a passionate iOS developer specialized in <strong>Swift</strong> and <strong>SwiftUI</strong>.
+        I love building beautiful
