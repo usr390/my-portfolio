@@ -1,25 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My One-Page Portfolio</title>
 
-  <!-- Tailwind CSS via CDN -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css"
-  />
-  
-  <!-- Favicon (optional) -->
-  <!-- <link rel="icon" href="favicon.ico" /> -->
-
-  <!-- Any additional meta tags -->
-  <meta name="description" content="A brief overview of my iOS development projects and skills." />
+  <!-- Tailwind via official script -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="text-gray-800 bg-gray-100">
+<body class="bg-gray-100 text-gray-800">
 
-  <!-- NAVBAR / HEADER -->
+  <!-- HEADER / NAV -->
   <header class="bg-white shadow">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <h1 class="text-2xl font-bold text-blue-500">My Portfolio</h1>
@@ -33,24 +24,101 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section
-    class="bg-gray-800 text-white flex flex-col items-center justify-center min-h-screen text-center px-4"
-  >
-    <h2 class="text-4xl font-bold mb-4">Hello, I'm <span class="text-blue-400">[Your Name]</span></h2>
+  <!-- HERO (smaller than fullscreen) -->
+  <section class="bg-gray-800 text-white py-20 px-4 text-center">
+    <h2 class="text-4xl font-bold mb-4">Hey! I'm <span class="text-blue-400">Eddie</span></h2>
     <p class="text-xl mb-6">iOS Developer & Swift Enthusiast</p>
-    <a
-      href="#projects"
-      class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded text-lg transition"
+    <a href="#projects"
+       class="inline-block bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded text-lg transition"
     >
       View My Projects
     </a>
   </section>
 
-  <!-- ABOUT SECTION -->
+  <!-- ABOUT -->
   <section id="about" class="py-16 px-4 bg-gray-100">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">About Me</h2>
       <p class="text-gray-700 text-lg mb-6">
-        I'm a passionate iOS developer specialized in <strong>Swift</strong> and <strong>SwiftUI</strong>.
-        I love building beautiful
+        I graduated with a Computer Science degree from UTRGV in 2020 and currently work as a QA Software Analyst in Harlingen, TX. 
+        In my free time, I dive into side projects because I’m obsessed with building software people enjoy using. My biggest 
+        strength is my relentless attention to detail—whether it’s fine-tuning a user interface or optimizing a workflow, I focus on 
+        delivering the best possible experience for users. Technically, I’m most comfortable with Angular, .NET backends, 
+        and MySQL, but I never hesitate to automate any tedious task with whatever tool the sitation calls for. I’m also a big 
+        believer in thoughtful design and solid architecture; I enjoy reasoning through solutions to find 
+        the most optimal path forward. Above all, I’m not afraid to speak up about the small 
+        improvements that can make a product sing. If something’s mediocre, I’ll challenge it—respectfully, but firmly—because I truly 
+        believe great software emerges only when we refuse to settle 
+      </p>
+      <p class="text-gray-700 text-lg">
+        I believe in coding as simply as possible—without sacrificing performance or user experience. t’s about building solutions that 
+        feel effortless for the people who use them. If that means writing more 
+        lines of code in a straightforward way, so be it. I code for users because, in the end, user experience is king!
+        Outside of coding, I’m big on music—so big that I built RarelyGroovy.com to catalog local artists and make discovering new bands 
+        a delight. I love diving into album art, reading about how bands formed, and connecting the dots between different projects. 
+        Ultimately, whether I’m exploring music or writing code, I’m driven by the same goal: crafting experiences people genuinely enjoy.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- project 1 -->
+        <div class="bg-gray-50 rounded shadow p-6 flex flex-col">
+          <h3 class="text-xl font-semibold mb-2">Coin Flip App</h3>
+          <p class="text-gray-600 mb-4">
+            a swiftui-based coin flip app with sound effects, haptic feedback, and
+            a flip counter. uses userdefaults for local persistence.
+          </p>
+          <a 
+            href="https://github.com/yourgithubusername/coinflip"
+            target="_blank"
+            class="text-blue-500 hover:underline mt-auto"
+          >
+            View on GitHub
+          </a>
+        </div>
+        <!-- add more project cards -->
+        <div class="bg-gray-50 rounded shadow p-6 flex flex-col">
+            <h3 class="text-xl font-semibold mb-2">Rarelygroovy.com</h3>
+            <p class="text-gray-600 mb-4">
+                A MEAN-based web app that catalogs artists and bands in the RGV, listing upcoming music events to foster a more connected local music scene
+            </p>
+            <a 
+              href="https://github.com/yourgithubusername/coinflip"
+              target="_blank"
+              class="text-blue-500 hover:underline mt-auto"
+            >
+              View on GitHub
+            </a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-16 px-4 bg-gray-100">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact</h2>
+      <p class="text-gray-700 mb-8">
+        want to collaborate or say hi? 
+      </p>
+      <a
+        href="mailto:youremail@example.com"
+        class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded text-lg transition"
+      >
+        Email Me
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white py-4 text-center">
+    <p>© 2025 [Your Name]. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
