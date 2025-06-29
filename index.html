@@ -9,7 +9,7 @@
       background: #fff;
       color: #000;
       margin: 2rem;
-      line-height: 1.6;
+      line-height: .75;
     }
     a {
       color: black;
@@ -21,25 +21,49 @@
 
   <p>
     Eduardo Trevino
-    <img src="headshot.jpeg" alt="Eduardo Trevino headshot" style="float: right; width: 100px; margin-left: 1rem;">  </p>
+    <img src="headshot.jpeg" alt="Eduardo Trevino headshot"
+        style="float: right; width: 100px; margin-left: 1rem; cursor: pointer;"
+        onclick="openLightbox('headshot.jpeg')">
+  </p>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" style="max-width:90%; max-height:90%; box-shadow:0 0 20px black;">
+  </div>
   <br>
+
+    <!-- ✅ script goes here -->
+  <script>
+    function openLightbox(src) {
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
   <p>Projects</p>
   <p><a href="https://rarelygroovy.com" target="_blank">Rarelygroovy.com</a></p>
-  <p><a href="https://apps.apple.com/us/app/rarelygroovy/id6743501928">Rarelygroovy mobile app (iOS)</a></p>
+  <p><a href="https://apps.apple.com/us/app/rarelygroovy/id6743501928">Rarelygroovy mobile app</a></p>
 
   <br>
   <p>Contact</p>
   <p><a href="mailto:edutrecompute@gmail.com">Email</a></p>
   <p><a href="https://github.com/usr390" target="_blank">GitHub</a></p>
+  <p><a href="et-resume.pdf" target="_blank" download>Resume</a></p>
 
   <br>
   <p>Bio</p>
-  <p>- I was born in McAllen in 1999</p>
-  <p>- I studied computer science at the Univeristy of Texas Rio Grande Valley in 2018</p>
-  <p>- I got my first software analyst job at DataLogic in 2022</p>
-  <p>- I launched my first solo project, Rarelygroovy.com, in 2023</p>
-  <p>- I launched my second solo project, Rarelygroovy for iOS, in 2025</p>
-  <p>- Most currently I am seeking professional software development work</p>
-
+  <div style="line-height: 1.5;">
+    <p>- I was born in McAllen in 1999</p>
+    <p>- I studied computer science at the Univeristy of Texas Rio Grande Valley in 2018</p>
+    <p>- I got my first professional software analyst job at DataLogic in 2022</p>
+    <p>- I made contributions in test automation, perfomance optimization, UI design, interaction design, and exploratory bug reporting</p>
+    <p>- Most currently I am seeking a new professional role in software development</p>
+  </div>
 </body>
 </html>
